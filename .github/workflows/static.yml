@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Faheem's World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background: #0078D7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .welcome {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #0078D7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <form onsubmit="showWelcome(); return false;">
+            <input type="text" placeholder="Username" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <div class="welcome" id="welcomeMessage" style="display:none;">
+            Welcome to Faheem's World!
+        </div>
+    </div>
+
+    <script>
+        function showWelcome() {
+            document.getElementById("welcomeMessage").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
